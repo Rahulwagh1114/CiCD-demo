@@ -22,7 +22,7 @@ app.use(express.json())
 const mongoDb=async()=>{
    try{
     await mongoose.connect(process.env.MONGO_URL)
-     console.log("database is connected")
+     console.log("Database is connected")
    }catch(err){
     console.log("Failed to connect database",err)
    }
