@@ -44,5 +44,5 @@ jobs:
            docker pull ${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}:latest
            docker stop my-mern-backend || true
            docker rm my-mern-backend || true
-           docker run -d --name my-mern-backend --restart unless-stopped -p 8080:8080 -e  MONGO_URL="$MONGO_URI" ${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}:latest
+           docker run -d --name my-mern-backend --restart unless-stopped -p 8080:8080 -e  MONGO_URL="$MONGO_URL" ${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}:latest
            docker image prune -f
